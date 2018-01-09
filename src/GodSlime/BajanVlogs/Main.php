@@ -27,15 +27,15 @@ class main extends PluginBase implements Listener {
     if(count($player->getEffects()) != 3) {
       if($event->getItem()->getID() == 341) {
         $player->getInventory()->removeItem(Item::get(341, 0, 1));
-        $player->addEffect(Effect::getEffect(Effect::STRENGTH)->setAmplifier(3)->setDuration(100 * 20));
-        $player->addEffect(Effect::getEffect(Effect::SPEED)->setAmplifier(3)->setDuration(100 * 20));
-        $player->addEffect(Effect::getEffect(Effect::REGENERATION)->setAmplifier(3)->setDuration(100 * 20));
-        $player->addEffect(Effect::getEffect(Effect::JUMP_BOOST)->setAmplifier(3)->setDuration (100 * 20));
-        $player->addEffect(Effect::getEffect(Effect::HASTE)->setAmplifier(3)->setDuration (100 * 20));
-        $player->addEffect(Effect::getEffect(Effect::HEALTH_BOOST)->setAmplifier(3)->setDuration (100 * 20));
-        $player->addEffect(Effect::getEffect(Effect::INVISBILITY)->setAmplifier(3)->setDuration (50 * 10));
+        $player->addEffect(Effect::getEffect(Effect::STRENGTH)->setAmplifier(0)->setDuration(100 * 20));
+        $player->addEffect(Effect::getEffect(Effect::SPEED)->setAmplifier(1)->setDuration(100 * 20));
+        $player->addEffect(Effect::getEffect(Effect::REGENERATION)->setAmplifier(2)->setDuration(100 * 20));
+        $player->addEffect(Effect::getEffect(Effect::JUMP_BOOST)->setAmplifier(0)->setDuration (100 * 20));
+        $player->addEffect(Effect::getEffect(Effect::HASTE)->setAmplifier(2)->setDuration (100 * 20));
+        $player->addEffect(Effect::getEffect(Effect::HEALTH_BOOST)->setAmplifier(2)->setDuration (100 * 20));
+        $player->addEffect(Effect::getEffect(Effect::NIGHT_VISION)->setAmplifier(0)->setDuration (50 * 10));
         $player->getLevel()->addSound(new \pocketmine\level\sound\LaunchSound($player)); 
-        $player->sendMessage("[Server Name] You have used a god slime");
+        $player->sendMessage("GOD SLIME ACTIVATED");
       }
     }
   }
